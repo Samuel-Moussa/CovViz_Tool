@@ -1286,8 +1286,7 @@ if (( $(echo "$FUNC_COV < 85.0" | bc -l) )); then exit 1; fi
 
 ## Support & Contact
 
-**Email:** support@icsam.dev  
-**Website:** https://icsam.dev  
+**Email:** samuelmoussa64@gmail.com
 **Documentation:** https://docs.icsam.dev/covviz  
 **Issue Tracker:** https://github.com/icsam/covviz/issues  
 
@@ -1295,9 +1294,9 @@ if (( $(echo "$FUNC_COV < 85.0" | bc -l) )); then exit 1; fi
 
 ## License & Attribution
 
-**CovViz v4.1**  
+**CovViz v0.1**  
 Developed by: IC_SAM  
-License: Commercial (contact sales@icsam.dev for licensing)  
+License: Commercial (contact samuelmoussa64@gmail.com for licensing)  
 
 **Third-Party Libraries:**
 - Chart.js v4.4.0 (MIT License)
