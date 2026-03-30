@@ -1,0 +1,13 @@
+# Example Coverage Report
+
+## Branch Coverage
+- Details about branch coverage.
+
+## Statement Coverage
+- Details about statement coverage.
+
+## Toggle Coverage
+- Details about toggle coverage.
+
+## Covergroup Coverage
+- Details about covergroup coverage.
