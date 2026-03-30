@@ -35,7 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Version Badge**: Updated to v4.1 Fixed
 - **Parser Strategy**: Changed from single-pass to two-pass algorithm for accuracy
 
-## [4.0] - 2026-03-15
+## [0.0] - 2026-03-15
 
 ### Added
 - **Interactive Dashboards**: KPI cards, progress bars, radar chart, donut chart, quadrant plot
@@ -56,7 +56,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Color-coded metrics (Green ≥95%, Orange ≥75%, Red <75%)
 - Parse log with detailed extraction information
 
-## [3.0] - 2026-02-28
+## [0.0] - 2026-02-28
 
 ### Added
 - **Basic Parser**: Initial QuestaSim text report parser
@@ -70,12 +70,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - No multi-file merge support
 - No export functionality
 
-## [2.0] - 2026-02-15
+## [0.0] - 2026-02-15
 
 ### Added
 - **Initial Release**: Prototype version with basic parsing
 
-## [1.0] - 2026-02-01
+## [0.0] - 2026-02-01
 
 ### Added
 - **Project Inception**: Initial concept and architecture design
@@ -84,20 +84,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Upgrade Guide
 
-### From v3.x to v4.1
+### From v0.x to v0.1
 1. Download new `CovViz-Enhanced-Fixed.html`
 2. Replace old HTML file
 3. No migration needed — all reports work with new version
 4. Enjoy improved parser accuracy and new features
 
 ### Breaking Changes
-- None — v4.1 is fully backward compatible
+- None — v0.1 is fully backward compatible
 
 ---
 
 ## Known Issues
 
-### Current Version (v4.1)
+### Current Version (v0.1)
 - Bus signals like `[3:0]` may be truncated in display
 - Deep hierarchies (>2 levels) collapse to single level
 - FSM coverage parsing is basic (full support in Phase 1)
@@ -110,25 +110,25 @@ See [docs/Limitations.md](docs/Limitations.md) for detailed workarounds.
 
 ## Planned Releases
 
-### Phase 1: Robustness (Q2 2026)
+### Phase 1: Robustness 
 - VCS (Xcelium, imc) report support
 - Better bus signal handling
 - Improved FSM coverage parsing
 - Cross-coverage bin detection
 
-### Phase 2: Backend Integration (Q3 2026)
+### Phase 2: Backend Integration 
 - Optional Python Flask server
 - File-watch mechanism
 - WebSocket support
 - Database backend for trending
 
-### Phase 3: EDA Plugin (Q4 2026)
+### Phase 3: EDA Plugin 
 - QuestaSim Tcl plugin
 - VSCode extension
 - Xcelium integration
 - VCS integration
 
-### Phase 4: Advanced Analytics (Q1 2027)
+### Phase 4: Advanced Analytics 
 - Regression trending with statistics
 - Coverage prediction
 - Automated test generation recommendations
