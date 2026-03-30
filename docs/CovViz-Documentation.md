@@ -1,7 +1,7 @@
-# CovViz v4.1 — Coverage Report Analyzer
+# CovViz v0.1 — Coverage Report Analyzer
 ## Technical Documentation & User Guide
 
-**Version:** 4.1 Fixed  
+**Version:** 0.1 Fixed  
 **Release Date:** March 2026  
 **Developed by:** IC_SAM  
 **Status:** Production Ready  
