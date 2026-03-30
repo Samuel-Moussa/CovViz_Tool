@@ -4,7 +4,7 @@ Thank you for your interest in contributing to CovViz! This document provides gu
 
 ## Code of Conduct
 
-This project adheres to the Contributor Covenant Code of Conduct. By participating, you are expected to uphold this code. Please report unacceptable behavior to support@icsam.dev.
+This project adheres to the Contributor Covenant Code of Conduct. By participating, you are expected to uphold this code. Please report unacceptable behavior to samuelmoussa64@gmail.com.
 
 ## How to Contribute
 
