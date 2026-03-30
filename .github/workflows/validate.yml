@@ -75,7 +75,7 @@ jobs:
     
     - name: Validate file sizes
       run: |
-        SIZE=$(stat -f%z CovViz.html 2>/dev/null || stat -c%s CovViz-Enhanced-Fixed.html)
+        SIZE=$(stat -f%z CovViz.html 2>/dev/null || stat -c%s CovViz.html)
         if [ "$SIZE" -lt 10000 ]; then
           echo "ERROR: HTML file too small ($SIZE bytes)"
           exit 1
