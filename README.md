@@ -324,7 +324,7 @@ If CovViz helps your verification workflow, please:
 
 ---
 
-**CovViz v4.1** — Making coverage analysis simple, portable, and powerful.
+**CovViz v0.1** — Making coverage analysis simple, portable, and powerful.
 
 **Developed by:** Samuel Moussa (IC_SAM)  
 **Last Updated:** March 2026  
