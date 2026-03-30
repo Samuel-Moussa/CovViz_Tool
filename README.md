@@ -208,25 +208,25 @@ See [Limitations & Workarounds](docs/Limitations.md) for complete list and solut
 
 ## 🚀 Roadmap
 
-### Phase 1: Robustness (Q2 2026)
+### Phase 1: Robustness 
 - [ ] VCS (Xcelium, imc) report support
 - [ ] Better bus signal and escaped identifier handling
 - [ ] Improved FSM coverage parsing
 - [ ] Cross-coverage bin detection
 
-### Phase 2: Backend Integration (Q3 2026)
+### Phase 2: Backend Integration 
 - [ ] Optional Python Flask server for live refresh
 - [ ] File-watch mechanism
 - [ ] WebSocket support for real-time dashboards
 - [ ] Database backend for regression trending
 
-### Phase 3: EDA Plugin (Q4 2026)
+### Phase 3: EDA Plugin 
 - [ ] QuestaSim Tcl plugin
 - [ ] VSCode extension
 - [ ] Xcelium integration
 - [ ] VCS integration
 
-### Phase 4: Advanced Analytics (Q1 2027)
+### Phase 4: Advanced Analytics 
 - [ ] Regression trending with statistics
 - [ ] Coverage prediction based on test history
 - [ ] Automated test generation recommendations
@@ -300,8 +300,8 @@ We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for:
 
 - **Documentation:** See [docs/](docs/) folder
 - **Issues:** [GitHub Issues](https://github.com/Samuel-Moussa/CovViz/issues)
-- **Email:** support@icsam.dev
-- **Website:** https://icsam.dev
+- **Email:** samuelmoussa64@gmail.com
+
 
 ## 📄 License
 
