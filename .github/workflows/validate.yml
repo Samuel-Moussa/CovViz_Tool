@@ -1,0 +1,110 @@
+name: Validate CovViz
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Check file exists
+      run: |
+        if [ ! -f "CovViz-Enhanced-Fixed.html" ]; then
+          echo "ERROR: CovViz-Enhanced-Fixed.html not found"
+          exit 1
+        fi
+        echo "✓ CovViz HTML file found"
+    
+    - name: Validate HTML structure
+      run: |
+        if ! grep -q "<!DOCTYPE html>" CovViz-Enhanced-Fixed.html; then
+          echo "ERROR: Invalid HTML structure"
+          exit 1
+        fi
+        echo "✓ HTML structure valid"
+    
+    - name: Check for required sections
+      run: |
+        REQUIRED=("parseTextReport" "renderDashboard" "Chart.js" "drop-zone")
+        for section in "${REQUIRED[@]}"; do
+          if ! grep -q "$section" CovViz-Enhanced-Fixed.html; then
+            echo "ERROR: Missing required section: $section"
+            exit 1
+          fi
+        done
+        echo "✓ All required sections found"
+    
+    - name: Validate example reports
+      run: |
+        if [ ! -f "examples/coverage_simple.txt" ]; then
+          echo "ERROR: Example report not found"
+          exit 1
+        fi
+        
+        # Check for required sections in example
+        SECTIONS=("Branch Coverage" "Statement Coverage" "Toggle Coverage" "Covergroup Coverage")
+        for section in "${SECTIONS[@]}"; do
+          if ! grep -q "$section" examples/coverage_simple.txt; then
+            echo "ERROR: Missing section in example: $section"
+            exit 1
+          fi
+        done
+        echo "✓ Example reports valid"
+    
+    - name: Check documentation
+      run: |
+        if [ ! -f "README.md" ]; then
+          echo "ERROR: README.md not found"
+          exit 1
+        fi
+        if [ ! -f "CHANGELOG.md" ]; then
+          echo "ERROR: CHANGELOG.md not found"
+          exit 1
+        fi
+        if [ ! -f "LICENSE" ]; then
+          echo "ERROR: LICENSE not found"
+          exit 1
+        fi
+        echo "✓ Documentation files present"
+    
+    - name: Validate file sizes
+      run: |
+        SIZE=$(stat -f%z CovViz-Enhanced-Fixed.html 2>/dev/null || stat -c%s CovViz-Enhanced-Fixed.html)
+        if [ "$SIZE" -lt 10000 ]; then
+          echo "ERROR: HTML file too small ($SIZE bytes)"
+          exit 1
+        fi
+        echo "✓ HTML file size valid ($SIZE bytes)"
+    
+    - name: Check for common issues
+      run: |
+        # Check for console.log in production code
+        if grep -q "console.log" CovViz-Enhanced-Fixed.html; then
+          echo "WARNING: console.log statements found (should be removed for production)"
+        fi
+        
+        # Check for TODO comments
+        if grep -q "TODO\|FIXME\|HACK" CovViz-Enhanced-Fixed.html; then
+          echo "WARNING: TODO/FIXME/HACK comments found"
+        fi
+        
+        echo "✓ Code quality check complete"
+    
+    - name: Validation Summary
+      run: |
+        echo "========================================="
+        echo "✓ All validation checks passed!"
+        echo "========================================="
+        echo "Files checked:"
+        echo "  - CovViz-Enhanced-Fixed.html"
+        echo "  - README.md"
+        echo "  - CHANGELOG.md"
+        echo "  - LICENSE"
+        echo "  - examples/coverage_simple.txt"
+        echo "========================================="

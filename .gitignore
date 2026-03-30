@@ -1,0 +1,60 @@
+# Coverage Reports
+coverage*.txt
+coverage*.json
+*.ucdb
+*.ucdb.bak
+
+# Simulation Artifacts
+work/
+transcript
+wlf*
+*.wdb
+*.vcd
+*.vpd
+*.fsdb
+*.shm
+
+# QuestaSim
+modelsim.ini
+*.ini
+*.do
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Node (if used for tooling)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+env/
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+
+# Test outputs
+test_results/
+*.html.bak
