@@ -2,7 +2,7 @@
 
 **Zero-dependency QuestaSim coverage report visualizer. Interactive dashboards, multi-run analysis, CI/CD ready. Single HTML file, offline-capable.**
 
-![Version](https://img.shields.io/badge/version-4.1-blue)
+![Version](https://img.shields.io/badge/version-0.1-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Status](https://img.shields.io/badge/status-production--ready-brightgreen)
 
