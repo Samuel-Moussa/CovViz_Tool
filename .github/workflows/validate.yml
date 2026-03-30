@@ -15,15 +15,15 @@ jobs:
     
     - name: Check file exists
       run: |
-        if [ ! -f "CovViz-Enhanced-Fixed.html" ]; then
-          echo "ERROR: CovViz-Enhanced-Fixed.html not found"
+        if [ ! -f "CovViz.html" ]; then
+          echo "ERROR: CovViz.html not found"
           exit 1
         fi
         echo "✓ CovViz HTML file found"
     
     - name: Validate HTML structure
       run: |
-        if ! grep -q "<!DOCTYPE html>" CovViz-Enhanced-Fixed.html; then
+        if ! grep -q "<!DOCTYPE html>" CovViz.html; then
           echo "ERROR: Invalid HTML structure"
           exit 1
         fi
@@ -33,7 +33,7 @@ jobs:
       run: |
         REQUIRED=("parseTextReport" "renderDashboard" "Chart.js" "drop-zone")
         for section in "${REQUIRED[@]}"; do
-          if ! grep -q "$section" CovViz-Enhanced-Fixed.html; then
+          if ! grep -q "$section" CovViz.html; then
             echo "ERROR: Missing required section: $section"
             exit 1
           fi
@@ -75,7 +75,7 @@ jobs:
     
     - name: Validate file sizes
       run: |
-        SIZE=$(stat -f%z CovViz-Enhanced-Fixed.html 2>/dev/null || stat -c%s CovViz-Enhanced-Fixed.html)
+        SIZE=$(stat -f%z CovViz.html 2>/dev/null || stat -c%s CovViz-Enhanced-Fixed.html)
         if [ "$SIZE" -lt 10000 ]; then
           echo "ERROR: HTML file too small ($SIZE bytes)"
           exit 1
@@ -85,12 +85,12 @@ jobs:
     - name: Check for common issues
       run: |
         # Check for console.log in production code
-        if grep -q "console.log" CovViz-Enhanced-Fixed.html; then
+        if grep -q "console.log" CovViz.html; then
           echo "WARNING: console.log statements found (should be removed for production)"
         fi
         
         # Check for TODO comments
-        if grep -q "TODO\|FIXME\|HACK" CovViz-Enhanced-Fixed.html; then
+        if grep -q "TODO\|FIXME\|HACK" CovViz.html; then
           echo "WARNING: TODO/FIXME/HACK comments found"
         fi
         
@@ -102,7 +102,7 @@ jobs:
         echo "✓ All validation checks passed!"
         echo "========================================="
         echo "Files checked:"
-        echo "  - CovViz-Enhanced-Fixed.html"
+        echo "  - CovViz.html"
         echo "  - README.md"
         echo "  - CHANGELOG.md"
         echo "  - LICENSE"
