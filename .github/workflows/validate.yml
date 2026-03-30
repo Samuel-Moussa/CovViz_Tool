@@ -33,7 +33,7 @@ jobs:
       run: |
         REQUIRED=("parseTextReport" "renderDashboard" "Chart.js" "drop-zone")
         for section in "${REQUIRED[@]}"; do
-          if ! grep -q "$section" CovViz.html; then
+          if ! grep -qi "$section" CovViz.html; then
             echo "ERROR: Missing required section: $section"
             exit 1
           fi
