@@ -264,7 +264,7 @@ See [Troubleshooting Guide](docs/Troubleshooting.md) for more issues and solutio
 
 ```
 CovViz/
-├── CovViz-Enhanced-Fixed.html      # Main tool (single file)
+├── IC_SAM_CovViz.html               # Main tool (single file)
 ├── README.md                        # This file
 ├── LICENSE                          # MIT License
 ├── CHANGELOG.md                     # Version history
